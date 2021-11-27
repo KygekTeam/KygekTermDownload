@@ -31,35 +31,35 @@ namespace KygekTermDownload
                     {
                         var client = new WebClient();
                         Console.WriteLine(PREFIX + "Downloading PHP");
-                        client.DownloadFile("https://jenkins.kygekteam.org/job/PMMP-4-PHP-Binary/lastSuccessfulBuild/artifact/Windows/PHP_Windows-x86_64.zip", "php.zip");
+                        client.DownloadFile("https://jenkins.kygek.team/job/PMMP-4-PHP-Binary/lastSuccessfulBuild/artifact/Windows/PHP_Windows-x86_64.zip", "php.zip");
                         Console.WriteLine(PREFIX + "Downloading PM4");
-                        client.DownloadFile("https://jenkins.kygekteam.org/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/PocketMine-MP.phar", "pmmp.phar");
+                        client.DownloadFile("https://jenkins.kygek.team/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/PocketMine-MP.phar", "pmmp.phar");
                         Console.WriteLine(PREFIX + "Downloading Command Prompt start script");
-                        client.DownloadFile("https://jenkins.kygekteam.org/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/start.cmd", "start.cmd");
+                        client.DownloadFile("https://jenkins.kygek.team/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/start.cmd", "start.cmd");
                         Console.WriteLine(PREFIX + "Downloading PowerShell start script");
-                        client.DownloadFile("https://jenkins.kygekteam.org/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/start.ps1", "start.ps1");
+                        client.DownloadFile("https://jenkins.kygek.team/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/start.ps1", "start.ps1");
                         Console.WriteLine(PREFIX + "Finished downloading!");
                     }
                     else if (args[1].ToLower() == "mac")
                     {
                         var client = new WebClient();
                         Console.WriteLine(PREFIX + "Downloading PHP");
-                        client.DownloadFile("https://jenkins.kygekteam.org/job/PMMP-4-PHP-Binary/lastSuccessfulBuild/artifact/Mac/PHP_MacOS-x86_64.tar.gz", "php.tar.gz");
+                        client.DownloadFile("https://jenkins.kygek.team/job/PMMP-4-PHP-Binary/lastSuccessfulBuild/artifact/Mac/PHP_MacOS-x86_64.tar.gz", "php.tar.gz");
                         Console.WriteLine(PREFIX + "Downloading PM4");
-                        client.DownloadFile("https://jenkins.kygekteam.org/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/PocketMine-MP.phar", "pmmp.phar");
+                        client.DownloadFile("https://jenkins.kygek.team/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/PocketMine-MP.phar", "pmmp.phar");
                         Console.WriteLine(PREFIX + "Downloading start script");
-                        client.DownloadFile("https://jenkins.kygekteam.org/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/start.cmd", "start.sh");
+                        client.DownloadFile("https://jenkins.kygek.team/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/start.cmd", "start.sh");
                         Console.WriteLine(PREFIX + "Finished downloading!");
                     }
                     else if (args[1].ToLower() == "linux")
                     {
                         var client = new WebClient();
                         Console.WriteLine(PREFIX + "Downloading PHP");
-                        client.DownloadFile("https://jenkins.kygekteam.org/job/PMMP-4-PHP-Binary/lastSuccessfulBuild/artifact/Linux/PHP_Linux-x86_64.tar.gz", "php.tar.gz");
+                        client.DownloadFile("https://jenkins.kygek.team/job/PMMP-4-PHP-Binary/lastSuccessfulBuild/artifact/Linux/PHP_Linux-x86_64.tar.gz", "php.tar.gz");
                         Console.WriteLine(PREFIX + "Downloading PM4");
-                        client.DownloadFile("https://jenkins.kygekteam.org/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/PocketMine-MP.phar", "pmmp.phar");
+                        client.DownloadFile("https://jenkins.kygek.team/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/PocketMine-MP.phar", "pmmp.phar");
                         Console.WriteLine(PREFIX + "Downloading start script");
-                        client.DownloadFile("https://jenkins.kygekteam.org/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/start.cmd", "start.sh");
+                        client.DownloadFile("https://jenkins.kygek.team/job/PocketMine-MP-4/lastSuccessfulBuild/artifact/start.cmd", "start.sh");
                         Console.WriteLine(PREFIX + "Finished downloading!");
                     }
                     else
@@ -81,7 +81,7 @@ namespace KygekTermDownload
                 if (args.Length >= 2)
                 {
                     WebClient client = new WebClient();
-                    Stream data = client.OpenRead("https://api.kygekteam.org");
+                    Stream data = client.OpenRead("https://api.kygek.team");
                     StreamReader reader = new StreamReader(data);
                     string dataString = reader.ReadToEnd();
                     data.Close();
@@ -247,7 +247,7 @@ namespace KygekTermDownload
             {
                 WebClient client = new WebClient();
                 Console.WriteLine("Downloading KygekEasyGamemode");
-                client.DownloadFile("https://kygekteam.org/plugins/KygekEasyGamemode_v1.1.1.phar", "KygekEasyGamemode.phar");
+                client.DownloadFile("https://kygek.team/plugins/KygekEasyGamemode_v1.1.1.phar", "KygekEasyGamemode.phar");
             }
             else
             {
@@ -272,7 +272,7 @@ namespace KygekTermDownload
         private static void SendListOfPlugins()
         {
             WebClient client = new WebClient();
-            Stream data = client.OpenRead("https://api.kygekteam.org");
+            Stream data = client.OpenRead("https://api.kygek.team");
             StreamReader reader = new StreamReader(data);
             string dataString = reader.ReadToEnd();
             data.Close();
